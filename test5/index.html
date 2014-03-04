@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test5</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.click').on('click', function(e) {
+                    e.preventDefault();
+                    var firstClick = $('.click');
+                    var firstBR = $('br');
+                    firstClick[0].remove();
+                    firstBR[0].remove();
+                    $('body').append(firstClick[0]);
+                    $('body').append(firstBR[0]);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button class="click">1</button><br>
+        <button class="click">2</button><br>
+        <button class="click">3</button><br>
+    </body>
+</html>
